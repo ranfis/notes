@@ -18,9 +18,10 @@ public:
     void set_content(char*);
 
 private slots:
-    void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_btn_add_clicked();
+
+    void on_btn_close_clicked();
 
 private:
     Ui::Note *ui;

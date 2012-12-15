@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ReenieBeanie-VTT.ttf</file>
+        <file>tomboy.png</file>
+        <file>tomboy.ico</file>
+    </qresource>
+</RCC>

@@ -8,7 +8,7 @@ Note::Note(QWidget *parent) :
     ui->setupUi(this);
     Qt::WindowFlags flags = 0;
     flags |= Qt::FramelessWindowHint;
-    //    flags |= Qt::Window;
+    //        flags |= Qt::Window;
 
     this->setWindowFlags(flags);
 }
@@ -16,12 +16,6 @@ Note::Note(QWidget *parent) :
 Note::~Note()
 {
     delete ui;
-}
-
-void Note::on_pushButton_clicked()
-{
-    Note *n = new Note;
-    n->show();
 }
 
 void Note::set_content(char* content){
@@ -32,7 +26,14 @@ char* Note::content(){
     return this->_content;
 }
 
-void Note::on_pushButton_2_clicked()
+
+void Note::on_btn_add_clicked()
+{
+    Note *n = new Note;
+    n->show();
+}
+
+void Note::on_btn_close_clicked()
 {
     this->close();
 }
