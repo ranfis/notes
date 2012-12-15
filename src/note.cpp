@@ -31,3 +31,8 @@ void Note::set_content(char* content){
 char* Note::content(){
     return this->_content;
 }
+
+void Note::on_pushButton_2_clicked()
+{
+    this->close();
+}
