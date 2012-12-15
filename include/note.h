@@ -2,6 +2,7 @@
 #define NOTE_H
 
 #include <QMainWindow>
+#include <QSizeGrip>
 
 namespace Ui {
 class Note;
@@ -10,12 +11,19 @@ class Note;
 class Note : public QMainWindow
 {
     Q_OBJECT
+private:
     char* _content;
+    QPoint _last_point;
+    bool _is_moving;
 public:
     explicit Note(QWidget *parent = 0);
     ~Note();
     char* content();
     void set_content(char*);
+protected:
+    void mouseMoveEvent(QMouseEvent* event);
+    void mousePressEvent(QMouseEvent* event);
+    void mouseReleaseEvent(QMouseEvent* event);
 
 private slots:
 
