@@ -16,7 +16,12 @@ Note::Note(QWidget *parent) :
     g->setStyleSheet("background-color:0;");
     ui->verticalLayout->addWidget(g, 0, Qt::AlignBottom | Qt::AlignRight);
     ui->note_text->setFrameShape(QFrame::NoFrame);
-    ui->note_text->setPlainText("Hello World, \n \nMy Name Is Ranfis");
+    QString note;
+    csv = new CSV("notes.csv");
+    note =  (const char*)csv->read_file().c_str();
+    ui->note_text->setPlainText(note);
+
+
 }
 
 Note::~Note()
@@ -46,6 +51,8 @@ void Note::on_btn_close_clicked()
         return;
     }
     if(QMessageBox::question(this, tr("Close"), tr("Close this Note?"), QMessageBox::Yes, QMessageBox::No, QMessageBox::NoButton) == QMessageBox::Yes){
+        char* content = (char*)ui->note_text->toPlainText().toStdString().c_str();
+        csv->write(content);
         this->close();
     }
 }
@@ -84,6 +91,7 @@ void Note::on_pushButton_clicked()
     }
     if(QMessageBox::question(this, tr("Clear"), tr("Clear the contents of this Note?"), QMessageBox::Yes, QMessageBox::No, QMessageBox::NoButton) == QMessageBox::Yes){
         ui->note_text->setPlainText("");
+        csv->write("");
     }
 
 }

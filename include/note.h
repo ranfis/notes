@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QSizeGrip>
+#include "csv.h"
 
 namespace Ui {
 class Note;
@@ -15,6 +16,7 @@ private:
     char* _content;
     QPoint _last_point;
     bool _is_moving;
+    CSV* csv;
 public:
     explicit Note(QWidget *parent = 0);
     ~Note();

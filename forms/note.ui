@@ -28,7 +28,10 @@
   </property>
   <widget class="QWidget" name="note_body">
    <property name="styleSheet">
-    <string notr="true">background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #fe6, stop: 0 #f5da41,  stop: 1 #f6ef97);</string>
+    <string notr="true">background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #F9EFAF, stop: 1 #F7E98D);
+
+/*background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #fe6, stop: 0 #f5da41,  stop: 1 #f6ef97);*/
+</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <property name="spacing">
