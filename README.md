@@ -10,4 +10,5 @@ Lista de cambios pendientes:
 + Agregar un scrollbar elegante.
 + Opcion de cambiar la tipografia.
 + Opcion de cambiar el color de fondo.
++ Movimiento de la ventana.
 ```
